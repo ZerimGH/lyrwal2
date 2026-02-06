@@ -37,7 +37,7 @@ Setup:
      >
      > export XAUTHORITY=$(ls /tmp/xauth_* | head -n 1)
      >
-     > WALLPAPER_DIR=~/.config/textwal2/wallpaper/output.png
+     > WALLPAPER_DIR=~/.config/textwal2/output.png
      >
      > feh --bg-fill $WALLPAPER_DIR
      > 
