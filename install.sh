@@ -17,6 +17,4 @@ sudo install -Dm755 textwal2/build/textwal2 /usr/bin/textwal2
 sudo install -d /usr/lib/lyrwal2
 sudo cp -r py /usr/lib/lyrwal2/
 
-sudo cp -r venv /usr/lib/lyrwal2/venv
-
-cp -r conf/* $HOME/.config
+sudo cp -r conf /etc/lyrwal2conf
