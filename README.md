@@ -1,5 +1,8 @@
 Lyrwal2 is a simple program I made to set my wallpaper to an image of random song lyrics from artists.
 
+Preview:
+![2026_02_06_06_58_47](https://github.com/user-attachments/assets/8d4af1e8-2963-4f23-850e-f98c0e95228e)
+
 Setup:
   1) Install the package
 
