@@ -24,6 +24,8 @@ Setup:
      > 
      > api_key = "****************************************************************" # < PUT YOUR API KEY IN THESE QUOTES
      >
+     You can also change what artist to use lyrics from here
+  
   6) Fill in the script for textwal2 to set your wallpaper.
 
      There's no generic way to update the wallpaper between wm's, so you'll need a script to do that.
