@@ -26,7 +26,7 @@ if [ "$cmd" = "update" ]; then
     echo 'Copied default config to ~/.config/textwal2'
     ex="ye"
   fi
-  if [ "$ex" = "$ye" ]; then
+  if [ "$ex" = "ye" ]; then
     exit
   fi
 
