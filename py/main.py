@@ -1,0 +1,38 @@
+import fetcher
+import re
+import random
+import config
+import unicodedata
+from subprocess import Popen, PIPE, STDOUT
+
+# Get the lyrics to rnder 
+def get_lyrics():
+    lyrics = fetcher.random_lyrics_from_artists(config.options.artists)
+    if lyrics is None:
+        return "No lyrics found."
+
+    paragraphs = re.split(r'\n{2,}', lyrics)
+    paragraph = random.choice(paragraphs)
+
+    max_lines = config.options.max_lines
+    powers = [2]
+    for i in range(2, max_lines):
+        n = 2 ** i
+        if n > max_lines: break
+        powers.append(n)
+    n_lines = random.choice(powers)
+
+    return "\n".join(paragraph.split("\n")[:n_lines])
+
+# Replace unrenderable characters from the selected lyrics
+def process_lyrics(lyrics):
+    return unicodedata.normalize('NFD', lyrics).encode('ascii', 'ignore')
+
+if __name__ == "__main__":
+    lyrics = get_lyrics() 
+    lyrics_ascii = process_lyrics(lyrics)
+    final_lyrics = lyrics_ascii.decode('ascii')
+    p = Popen(['textwal2', 'set'], stdout=PIPE, stdin=PIPE, stderr=PIPE, text=True)
+    stdout_data = p.communicate(input=final_lyrics)[0]
+    print(stdout_data)
+    exit(0)

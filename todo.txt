@@ -1,0 +1,15 @@
+TODO:
+  more config options:
+    # text alignment 
+    # character alignment
+    centre character alignment
+    # background image instead of solid coloud
+    lyric modes:
+      # list of artists
+      list of songs
+      list of albums
+      maybe currently playing song with playerctl metadata?
+    # text opacity
+    option to show song information (title, artist) under lyrics
+  fix textwal's text alignment
+  improve song lookup (remove irrelevant results)
